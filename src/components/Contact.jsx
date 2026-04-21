@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 
-// Composant Dropdown Sur-Mesure
 const CustomSelect = ({ label, name, value, options, onChange, design }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -168,6 +167,7 @@ const Contact = ({ content, design, global }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 items-start">
           <div
             data-aos="fade-right"
+            data-aos-offset="0"
             className="flex flex-col justify-center lg:sticky lg:top-32"
           >
             <h2 className={`mb-16 ${design?.title}`}>
@@ -206,11 +206,7 @@ const Contact = ({ content, design, global }) => {
             </div>
           </div>
 
-          <div
-            data-aos="fade-left"
-            data-aos-delay="200"
-            className="mt-12 lg:mt-0"
-          >
+          <div data-aos="fade-up" data-aos-offset="0" className="mt-8 lg:mt-0">
             <div
               className={`${design?.formWrapper} ${global?.imageRadius || "rounded-none"}`}
             >

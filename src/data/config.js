@@ -12,7 +12,7 @@ export const siteData = {
 
   navbar: {
     design: {
-      bgScrolled: "bg-[#faf7f3] border-b border-[#303030]/10 shadow-sm",
+      bgScrolled: "bg-[#f9f6f0] border-b border-[#303030]/10 shadow-sm",
       bgTransparent: "bg-transparent",
       logoText:
         "text-[#303030] font-serif font-black text-2xl md:text-3xl tracking-tighter",
@@ -20,19 +20,19 @@ export const siteData = {
       linkActive:
         "text-[11px] font-bold tracking-[0.2em] uppercase text-[#a2623d]",
       btnPrimary:
-        "bg-[#303030] text-[#faf7f3] hover:bg-[#a2623d] text-[10px] font-bold uppercase tracking-[0.2em] shadow-md",
+        "bg-[#303030] text-[#f9f6f0] hover:bg-[#a2623d] text-[10px] font-bold uppercase tracking-[0.2em] shadow-md",
       iconClass: "text-[#303030] hover:text-[#a2623d]",
       burgerClass: "text-[#303030]",
       logoDot: "text-[#a2623d]",
       linkUnderline: "bg-[#a2623d]",
       linkUnderlineActive: "bg-[#a2623d]",
-      mobileMenuBg: "bg-[#faf7f3] border-t border-[#303030]/10",
+      mobileMenuBg: "bg-[#f9f6f0] border-t border-[#303030]/10",
       mobileLink:
         "font-serif text-2xl font-medium text-[#303030]/70 hover:text-[#a2623d]",
       mobileLinkActive: "font-serif text-2xl font-black text-[#a2623d]",
       mobileIcon: "text-[#303030] hover:text-[#a2623d]",
       mobileBtn:
-        "font-sans text-sm font-bold uppercase tracking-widest bg-[#303030] text-[#faf7f3]",
+        "font-sans text-sm font-bold uppercase tracking-widest bg-[#303030] text-[#f9f6f0]",
     },
     content: {
       links: [
@@ -51,41 +51,35 @@ export const siteData = {
     },
   },
 
-  /* Section hero */
   hero: {
     design: {
-      bgColor: "bg-[#faf7f3]",
+      bgColor: "bg-[#f9f6f0]",
       bgImage:
         "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=2000&q=80",
       imagePlaceholderBg: "bg-[#42726b]/10",
       imagePlaceholderText:
         "font-sans font-light text-2xl text-[#42726b] uppercase tracking-widest",
-      overlay: "bg-[#303030]/60", // Opacité très légèrement augmentée pour garantir le contraste
-      borderOverlay: "border border-[#faf7f3]/30", // Le cadre fin conservé
-
-      // Amélioration lisibilité : texte plus clair (#faf7f3) et très légèrement plus grand
+      overlay: "bg-[#303030]/60",
+      borderOverlay: "border border-[#f9f6f0]/30",
       tagline:
-        "font-sans text-[11px] md:text-sm font-bold uppercase tracking-[0.4em] text-[#faf7f3] drop-shadow-md opacity-90",
+        "font-sans text-[11px] md:text-sm font-bold uppercase tracking-[0.4em] text-[#f9f6f0] drop-shadow-md opacity-90",
 
       titleLine1:
-        "font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-medium leading-[1.1] md:leading-[0.9] text-[#faf7f3] uppercase drop-shadow-md",
+        "font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-medium leading-[1.1] md:leading-[0.9] text-[#f9f6f0] uppercase drop-shadow-md",
       titleLine2:
-        "font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] md:leading-[0.9] text-[#63aba0] uppercase drop-shadow-md",
+        "font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] md:leading-[0.9] text-[#63aba0] uppercase drop-shadow-md",
 
-      // Design du nouveau bouton
       btnPrimary:
-        "mt-10 md:mt-14 bg-[#a2623d] text-[#faf7f3] px-8 md:px-10 py-4 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] shadow-xl hover:bg-[#faf7f3] hover:text-[#303030] transition-colors duration-300",
-
-      scrollIcon: "text-[#faf7f3] drop-shadow-md opacity-70",
+        "mt-8 md:mt-14 bg-[#a2623d] text-[#f9f6f0] px-8 md:px-10 py-3 md:py-4 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] shadow-xl hover:bg-[#f9f6f0] hover:text-[#303030] transition-colors duration-300",
+      scrollIcon: "text-[#f9f6f0] drop-shadow-md opacity-70",
     },
     content: {
       tagline: "DONNEZ VIE À VOS ENVIES",
       titleLine1: "UN INTÉRIEUR",
       titleLine2: "POUR SE RESSOURCER",
       imagePlaceholderText: "ESPACE INSPIRATION",
-      // Contenu du nouveau bouton
       cta: "Découvrir mon univers",
-      ctaHref: "#about", // Envoie vers la section histoire (tu peux mettre "#services" si tu préfères)
+      ctaHref: "#about",
     },
   },
 
@@ -93,8 +87,8 @@ export const siteData = {
     design: {
       bgColor: "bg-[#303030]",
       textClass:
-        "font-serif font-light italic text-xl md:text-2xl cursor-default text-[#faf7f3]/70 hover:text-[#faf7f3] tracking-widest",
-      separator: "bg-[#faf7f3]/20",
+        "font-serif font-light italic text-xl md:text-2xl cursor-default text-[#f9f6f0]/70 hover:text-[#f9f6f0] tracking-widest",
+      separator: "bg-[#f9f6f0]/20",
     },
     content: [
       "AUTHENTICITÉ",
@@ -108,7 +102,7 @@ export const siteData = {
   about: {
     design: {
       bgColor: "bg-[#ffffff]",
-      bottomDivider: "text-[#faf7f3]",
+      bottomDivider: "text-[#f9f6f0]",
       lineDecoration: "bg-[#a2623d]",
       subtitle:
         "font-sans text-[10px] font-bold tracking-[0.4em] uppercase text-[#a2623d]",
@@ -120,7 +114,7 @@ export const siteData = {
       founderName: "font-serif font-black text-2xl text-[#42726b]",
       founderRole:
         "font-sans text-[10px] font-bold uppercase tracking-[0.3em] text-[#303030]/50",
-      imageWrapper: "shadow-2xl bg-[#faf7f3]",
+      imageWrapper: "shadow-2xl bg-[#f9f6f0]",
       imagePlaceholder:
         "font-sans font-light text-xl text-[#303030]/30 tracking-widest uppercase",
       imageBackgroundDecor: "border border-[#42726b]/20 bg-[#42726b]/5",
@@ -141,7 +135,7 @@ export const siteData = {
 
   services: {
     design: {
-      section: "bg-[#faf7f3]",
+      section: "bg-[#f9f6f0]",
       bottomDivider: "text-[#ffffff]",
       subtitle:
         "font-sans text-[10px] font-bold uppercase tracking-[0.4em] text-[#a2623d]",
@@ -153,9 +147,9 @@ export const siteData = {
         "font-serif text-lg font-medium leading-relaxed text-[#303030]/60 italic",
       tabWrapper: "",
       tabActive:
-        "font-sans bg-[#42726b] text-[#faf7f3] text-xs font-bold tracking-[0.2em] uppercase shadow-lg",
+        "font-sans bg-[#42726b] text-[#f9f6f0] text-xs font-bold tracking-[0.2em] uppercase shadow-lg",
       tabInactive:
-        "font-sans bg-white text-[#303030]/50 hover:text-[#303030] text-xs font-bold tracking-[0.2em] uppercase border border-[#303030]/10 hover:bg-[#faf7f3]",
+        "font-sans bg-white text-[#303030]/50 hover:text-[#303030] text-xs font-bold tracking-[0.2em] uppercase border border-[#303030]/10 hover:bg-[#f9f6f0]",
       panelActive: "shadow-2xl ring-1 ring-[#a2623d]/20",
       panelInactive:
         "bg-white border border-[#303030]/5 shadow-sm hover:bg-[#ffffff]",
@@ -163,26 +157,26 @@ export const siteData = {
       imageInactive: "opacity-60 grayscale",
       overlayActive: "bg-[#303030]/20 opacity-100",
       overlayInactive: "bg-[#303030]/80 opacity-100",
-      iconInactive: "text-[#faf7f3] drop-shadow-md",
+      iconInactive: "text-[#f9f6f0] drop-shadow-md",
       titleInactiveMobile:
-        "font-serif text-lg font-black text-[#faf7f3] uppercase tracking-tighter drop-shadow-md",
+        "font-serif text-lg font-black text-[#f9f6f0] uppercase tracking-tighter drop-shadow-md",
       iconInactivePC:
-        "text-[#faf7f3] drop-shadow-lg group-hover:text-[#a2623d]",
+        "text-[#f9f6f0] drop-shadow-lg group-hover:text-[#a2623d]",
       titleInactivePC:
-        "font-serif text-2xl font-black text-[#faf7f3] group-hover:text-[#a2623d] uppercase tracking-tighter drop-shadow-lg",
+        "font-serif text-2xl font-black text-[#f9f6f0] group-hover:text-[#a2623d] uppercase tracking-tighter drop-shadow-lg",
       iconActive: "text-[#a2623d]",
-      numberActive: "text-[#faf7f3] border-white/20 bg-white/10",
+      numberActive: "text-[#f9f6f0] border-white/20 bg-white/10",
       titleActive:
-        "font-serif text-3xl md:text-4xl font-black text-[#faf7f3] uppercase tracking-tighter",
+        "font-serif text-3xl md:text-4xl font-black text-[#f9f6f0] uppercase tracking-tighter",
       descActive:
-        "font-sans font-medium text-sm leading-relaxed text-[#faf7f3]/90",
+        "font-sans font-medium text-sm leading-relaxed text-[#f9f6f0]/90",
       listContainer: "border-white/10",
       listTitle:
-        "font-sans text-[#faf7f3] font-bold text-[10px] uppercase tracking-widest",
+        "font-sans text-[#f9f6f0] font-bold text-[10px] uppercase tracking-widest",
       listDesc:
-        "font-sans text-[#faf7f3]/70 text-[10px] uppercase tracking-widest",
+        "font-sans text-[#f9f6f0]/70 text-[10px] uppercase tracking-widest",
       listPrice:
-        "text-[#faf7f3] font-black bg-white/10 font-serif italic text-sm",
+        "text-[#f9f6f0] font-black bg-white/10 font-serif italic text-sm",
       contentBoxBg: "bg-[#303030]/90 backdrop-blur-xl",
     },
     content: {
@@ -345,10 +339,9 @@ export const siteData = {
       bgColor: "bg-[#ffffff]",
       subtitle:
         "font-sans text-[10px] font-bold uppercase tracking-[0.4em] text-[#a2623d]",
-      // CORRECTION ICI : text-3xl sur mobile pour faire tenir le mot, et break-words par sécurité
       title:
         "font-serif text-3xl sm:text-5xl md:text-7xl font-black text-[#303030] uppercase leading-[1.1] md:leading-[0.9] break-words",
-      imageWrapper: "bg-[#faf7f3] shadow-xl",
+      imageWrapper: "bg-[#f9f6f0] shadow-xl",
       imagePlaceholder:
         "font-sans font-black text-2xl text-[#42726b]/20 tracking-widest uppercase",
       itemTitle:
@@ -356,7 +349,7 @@ export const siteData = {
       itemCategory:
         "font-sans text-[10px] font-bold uppercase tracking-[0.3em] text-[#a2623d]",
       textBoxWrapper:
-        "bg-[#faf7f3]/95 backdrop-blur-md shadow-2xl border border-[#303030]/5",
+        "bg-[#f9f6f0]/95 backdrop-blur-md shadow-2xl border border-[#303030]/5",
       textBoxText:
         "font-sans text-[#303030]/70 font-medium text-sm text-center leading-relaxed",
     },
@@ -408,22 +401,20 @@ export const siteData = {
         "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=2000&q=80",
       overlay: "bg-[#303030]/95",
       title:
-        "font-serif text-5xl md:text-7xl leading-[0.9] text-[#faf7f3] font-black uppercase",
+        "font-serif text-5xl md:text-7xl leading-[0.9] text-[#f9f6f0] font-black uppercase",
       titleHighlight: "text-[#a2623d] font-light italic",
       subtitle:
         "font-sans text-[10px] font-bold uppercase tracking-[0.4em] text-[#42726b]",
       linkText:
-        "font-sans font-medium text-lg md:text-xl leading-relaxed cursor-pointer text-[#faf7f3] hover:text-[#a2623d]",
-
-      // Design du formulaire
+        "font-sans font-medium text-lg md:text-xl leading-relaxed cursor-pointer text-[#f9f6f0] hover:text-[#a2623d]",
       formWrapper:
-        "bg-[#faf7f3]/5 backdrop-blur-md border border-[#faf7f3]/10 p-8",
+        "bg-[#f9f6f0]/5 backdrop-blur-md border border-[#f9f6f0]/10 p-8",
       inputClass:
-        "w-full bg-transparent border-b border-[#faf7f3]/20 pb-3 text-[#faf7f3] placeholder:text-[#faf7f3]/40 focus:outline-none focus:border-[#a2623d] transition-colors font-sans text-sm",
+        "w-full bg-transparent border-b border-[#f9f6f0]/20 pb-3 text-[#f9f6f0] placeholder:text-[#f9f6f0]/40 focus:outline-none focus:border-[#a2623d] transition-colors font-sans text-sm",
       labelClass:
-        "block font-sans text-[10px] font-bold uppercase tracking-widest text-[#faf7f3]/60 mb-2",
+        "block font-sans text-[10px] font-bold uppercase tracking-widest text-[#f9f6f0]/60 mb-2",
       buttonClass:
-        "w-full bg-[#a2623d] text-[#faf7f3] py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-[#faf7f3] hover:text-[#303030] transition-colors",
+        "w-full bg-[#a2623d] text-[#f9f6f0] py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-[#f9f6f0] hover:text-[#303030] transition-colors",
     },
     content: {
       titleLine1: "DISCUTONS DE",
@@ -433,8 +424,6 @@ export const siteData = {
       contactTitle: "CONTACT DIRECT",
       email: "contact@julisama.fr",
       phone: "07 56 80 57 44",
-
-      // Contenu du formulaire
       form: {
         title: "ÉCRIVEZ-MOI",
         nameLabel: "Nom & Prénom",
@@ -466,7 +455,7 @@ export const siteData = {
 
   footer: {
     design: {
-      bgColor: "bg-[#faf7f3]",
+      bgColor: "bg-[#f9f6f0]",
       textColor: "text-[#303030]",
       logoText:
         "font-serif text-3xl font-black tracking-tighter uppercase text-[#303030] hover:text-[#a2623d]",

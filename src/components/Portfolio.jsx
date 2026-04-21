@@ -9,20 +9,27 @@ const Portfolio = ({ content, design, global }) => {
       className={`min-h-screen relative py-32 px-6 ${design?.bgColor || ""}`}
     >
       <div className="max-w-7xl mx-auto relative z-10 pb-16">
-        <div className="text-center" data-aos="fade-in">
+        <div className="text-center" data-aos="fade-in" data-aos-offset="0">
           <span className={`block mb-4 ${design?.subtitle}`}>
             {content.subtitle}
           </span>
-          <h2 className={`mb-24 ${design?.title}`}>{content.title}</h2>
+          <h2 className={`mb-12 md:mb-24 ${design?.title}`}>{content.title}</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32 px-4 md:px-12 mt-24">
-          <div className="flex flex-col gap-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32 px-4 md:px-12 mt-12 md:mt-24">
+          <div className="flex flex-col gap-12 md:gap-32">
             {content.items.slice(0, 2).map((item, index) => (
               <div
                 key={index}
                 className="group cursor-pointer"
                 data-aos="fade-up"
+                data-aos-offset="0"
+                // On supprime le délai sur mobile pour que l'apparition soit immédiate
+                data-aos-delay={
+                  typeof window !== "undefined" && window.innerWidth >= 768
+                    ? "0"
+                    : "0"
+                }
               >
                 <div
                   className={`relative overflow-hidden aspect-4/5 mb-8 ${design?.imageWrapper} ${global?.imageRadius || "rounded-none"}`}
@@ -43,7 +50,6 @@ const Portfolio = ({ content, design, global }) => {
                     </div>
                   )}
 
-                  {/* CORRECTION ICI : Masqué sur mobile, actif au survol sur PC */}
                   <div
                     className={`absolute bottom-6 inset-x-6 p-6 z-20 flex flex-col justify-center translate-y-6 opacity-0 pointer-events-none md:pointer-events-auto md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-800 ease-[cubic-bezier(0.25,1,0.5,1)] ${design?.textBoxWrapper}`}
                   >
@@ -60,13 +66,18 @@ const Portfolio = ({ content, design, global }) => {
             ))}
           </div>
 
-          <div className="flex flex-col gap-32 md:pt-32">
+          <div className="flex flex-col gap-12 md:gap-32 md:pt-32">
             {content.items.slice(2, 4).map((item, index) => (
               <div
                 key={index}
                 className="group cursor-pointer"
                 data-aos="fade-up"
-                data-aos-delay="200"
+                data-aos-offset="0"
+                data-aos-delay={
+                  typeof window !== "undefined" && window.innerWidth >= 768
+                    ? "200"
+                    : "0"
+                }
               >
                 <div
                   className={`relative overflow-hidden aspect-4/5 mb-8 ${design?.imageWrapper} ${global?.imageRadius || "rounded-none"}`}
@@ -87,7 +98,6 @@ const Portfolio = ({ content, design, global }) => {
                     </div>
                   )}
 
-                  {/* CORRECTION ICI : Masqué sur mobile, actif au survol sur PC */}
                   <div
                     className={`absolute bottom-6 inset-x-6 p-6 z-20 flex flex-col justify-center translate-y-6 opacity-0 pointer-events-none md:pointer-events-auto md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-800 ease-[cubic-bezier(0.25,1,0.5,1)] ${design?.textBoxWrapper}`}
                   >

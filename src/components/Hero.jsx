@@ -6,7 +6,8 @@ const Hero = ({ content, design, global }) => {
   return (
     <section
       id="hero"
-      className={`h-screen p-4 md:p-8 flex items-center justify-center overflow-hidden pt-24 md:pt-32 ${design?.bgColor || ""}`}
+      // CORRECTION : h-[100svh] pour le bas de l'écran, pt-32 pour baisser l'image sous la navbar, et p-5 pour un cadre plus élégant sur mobile
+      className={`h-[100svh] p-5 pb-6 md:p-8 flex items-center justify-center overflow-hidden pt-32 md:pt-32 ${design?.bgColor || ""}`}
     >
       <div
         className={`relative w-full h-full overflow-hidden p-4 md:p-8 ${global?.imageRadius}`}
@@ -66,7 +67,7 @@ const Hero = ({ content, design, global }) => {
               {content.titleLine2}
             </h1>
 
-            {/* LE NOUVEAU BOUTON CTA */}
+            {/* LE BOUTON CTA */}
             {content.cta && (
               <div data-aos="fade-up" data-aos-delay="900">
                 <a
@@ -81,7 +82,7 @@ const Hero = ({ content, design, global }) => {
         </div>
 
         <div
-          className="absolute z-20 bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+          className="absolute z-20 bottom-8 md:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
           data-aos="fade-in"
           data-aos-delay="1100"
         >
