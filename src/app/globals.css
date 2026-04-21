@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  /* EMPÊCHE LE SCROLL HORIZONTAL PARASITE SUR TOUT LE SITE */
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+@theme {
+  /* --- ANIMATIONS MARQUEE (VITESSE MOBILE VS DESKTOP) --- */
+
+  /* Vitesse rapide (par défaut pour mobile) : 5 secondes */
+  --animate-marquee: marquee 5s linear infinite;
+
+  /* Vitesse lente (pour desktop) : 40 secondes */
+  --animate-marquee-slow: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+::selection {
+  background-color: #e7e5e4;
+  color: #1c1917;
+}
