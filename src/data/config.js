@@ -205,8 +205,15 @@ export const siteData = {
             "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80",
           detailsList: [
             {
-              name: "Analyse personnalisée",
-              desc: "Étude via vos photos/plans.",
+              name: "Ce que ça comprend",
+              desc: "Questionnaire rapide, envoi de vos photos/plans et analyse personnalisée.",
+            },
+            {
+              name: "Ce que vous obtenez",
+              desc: "Mon avis de décoratrice sur votre problématique : une solution simple, efficace et unique.",
+            },
+            {
+              name: "Tarif",
               price: "39 €",
             },
           ],
@@ -215,13 +222,20 @@ export const siteData = {
           icon: "cube",
           title: "Flash Déco",
           details:
-            "Une analyse de votre pièce pour identifier son potentiel. Un plan d'action clair pour harmoniser et désencombrer.",
+            "Une analyse de votre pièce pour identifier son potentiel et savoir par où commencer.",
           image:
             "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
           detailsList: [
             {
-              name: "Plan d'action",
-              desc: "Recommandations d'agencement et couleurs.",
+              name: "Ce que ça comprend",
+              desc: "Analyse de l'espace à partir de vos photos/vidéos et plan d'action clair.",
+            },
+            {
+              name: "Ce que vous obtenez",
+              desc: "Un plan d'action pas à pas et des recommandations personnalisées.",
+            },
+            {
+              name: "Tarif",
               price: "89 €",
             },
           ],
@@ -230,19 +244,22 @@ export const siteData = {
           icon: "stone",
           title: "Mini-Book",
           details:
-            "Une feuille de route visuelle qui pose les bases de votre futur intérieur avec des idées d'ambiance adaptées à vos envies.",
+            "Un book digital avec des idées d'ambiance et des pistes déco adaptées à vos envies.",
           image:
             "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
           detailsList: [
             {
-              name: "Planche d'inspiration",
-              desc: "Couleurs, matières et mobilier.",
-              price: "149 €",
+              name: "Ce que ça comprend",
+              desc: "Questionnaire détaillé, planche d'inspiration, suggestions couleurs, matières et mobilier.",
             },
             {
-              name: "Option 3D",
-              desc: "Visuels réalistes en option.",
-              price: "+ 79 €",
+              name: "Ce que vous obtenez",
+              desc: "Un guide visuel qui reflète vos goûts et offre une base solide pour avancer.",
+            },
+            {
+              name: "Options & Tarif",
+              desc: "+ 79 € pour des visuels 3D.",
+              price: "149 €",
             },
           ],
         },
@@ -250,13 +267,20 @@ export const siteData = {
           icon: "hands",
           title: "RDV Coaching",
           details:
-            "Un rendez-vous personnalisé d'1h30 (en visio ou présentiel) pour répondre à vos questions et vous guider dans vos choix.",
+            "Un rendez-vous personnalisé (en visio ou présentiel) pour répondre à toutes vos questions et vous guider dans vos choix.",
           image:
             "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
           detailsList: [
             {
-              name: "Conseils en direct",
-              desc: "Aménagement, couleurs, mobilier.",
+              name: "Ce que ça comprend",
+              desc: "Échange 1h30, conseils en direct sur l'aménagement, les couleurs, le mobilier.",
+            },
+            {
+              name: "Ce que vous obtenez",
+              desc: "Des réponses concrètes, détaillées et un compte-rendu écrit (feuille de route).",
+            },
+            {
+              name: "Tarif",
               price: "199 €",
             },
           ],
@@ -265,13 +289,20 @@ export const siteData = {
           icon: "cube",
           title: "Immersion Déco",
           details:
-            "Une projection réaliste de votre futur intérieur pour vous aider à vous projeter et éviter erreurs d'aménagement.",
+            "Une projection réaliste de votre futur intérieur pour vous aider à vous projeter et éviter les erreurs.",
           image:
             "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80",
           detailsList: [
             {
-              name: "Modélisation 3D",
-              desc: "Visuels et plan d'agencement coté.",
+              name: "Ce que ça comprend",
+              desc: "Relevé de vos besoins, plans d'agencement cotés, planche d'ambiance et liste shopping.",
+            },
+            {
+              name: "Ce que vous obtenez",
+              desc: "Un guide prêt à l'emploi incluant des visuels 3D pour passer à l'action sereinement.",
+            },
+            {
+              name: "Tarif",
               price: "299 € / pièce",
             },
           ],
@@ -280,13 +311,20 @@ export const siteData = {
           icon: "stone",
           title: "Maison Révélée",
           details:
-            "L'offre Signature. On trie, on garde, on relooke. Je révèle le potentiel de votre maison sans tout casser, façon 'Maison à vendre' mais pour y rester !",
+            "Le principe de 'Maison à vendre', mais pour y rester ! Un dossier clé en main avec tous les éléments nécessaires pour réaliser votre projet.",
           image:
             "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
           detailsList: [
             {
-              name: "Dossier clé en main",
-              desc: "Plan d'action, 3D, shopping list complète.",
+              name: "Ce que ça comprend",
+              desc: "Visite complète, tri (ce qu'on garde/modifie), plan d'action pièce par pièce et projection.",
+            },
+            {
+              name: "Ce que vous obtenez",
+              desc: "Une nouvelle lecture de votre intérieur avec un plan concret pour réinventer votre maison.",
+            },
+            {
+              name: "Tarif",
               price: "Sur Devis",
             },
           ],
@@ -297,13 +335,20 @@ export const siteData = {
           icon: "hands",
           title: "Petit Coup de Neuf",
           details:
-            "Redonner vie à un espace déjà existant sans tout transformer. Idéal pour moderniser votre cabinet, commerce ou bureau.",
+            "Redonner vie à un espace déjà existant sans tout transformer. Idéal pour moderniser et harmoniser votre activité rapidement.",
           image:
             "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
           detailsList: [
             {
-              name: "Relooking",
-              desc: "Espace rafraîchi, cohérent et attractif.",
+              name: "Ce que ça comprend",
+              desc: "Analyse de l'espace, sélection couleurs/mobilier et projection visuelle en option.",
+            },
+            {
+              name: "Ce que vous obtenez",
+              desc: "Un espace rafraîchi, cohérent et attractif, sans gros travaux.",
+            },
+            {
+              name: "Tarif",
               price: "Sur Devis",
             },
           ],
@@ -312,13 +357,20 @@ export const siteData = {
           icon: "cube",
           title: "Je m'installe",
           details:
-            "Accompagnement complet pour créer un lieu professionnel à votre image dès l'ouverture. Idéal pour un nouveau commerce ou restaurant.",
+            "Accompagnement complet pour créer un lieu professionnel à votre image, dès l'ouverture.",
           image:
             "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80",
           detailsList: [
             {
-              name: "Agencement total",
-              desc: "Plans, mobilier, projection 3D.",
+              name: "Ce que ça comprend",
+              desc: "Étude des besoins, plans d'agencement, sélection du mobilier et feuille de route déco.",
+            },
+            {
+              name: "Ce que vous obtenez",
+              desc: "Des locaux fonctionnels où vos clients se sentent bien dès le premier jour.",
+            },
+            {
+              name: "Tarif",
               price: "Sur Devis",
             },
           ],
@@ -327,13 +379,20 @@ export const siteData = {
           icon: "stone",
           title: "Investissement Meublé",
           details:
-            "Valorisation d'un bien locatif ou touristique (Airbnb, gîte). Un bien qui se démarque attire plus de clients et augmente sa rentabilité.",
+            "Valorisation d'un bien locatif ou touristique (Airbnb, meublé de tourisme, gîte, hôtel).",
           image:
             "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80",
           detailsList: [
             {
-              name: "Design rentable",
-              desc: "Mobilier résistant, feuille de route déco.",
+              name: "Ce que ça comprend",
+              desc: "Analyse des cibles, sélection de déco résistante et feuille de route visuelle.",
+            },
+            {
+              name: "Ce que vous obtenez",
+              desc: "Un bien qui se démarque, attire plus de clients et augmente sa rentabilité.",
+            },
+            {
+              name: "Tarif",
               price: "Sur Devis",
             },
           ],
