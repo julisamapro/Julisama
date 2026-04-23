@@ -64,8 +64,7 @@ export const siteData = {
   hero: {
     design: {
       bgColor: "bg-[#faf7f3]",
-      bgImage:
-        "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=2000&q=80",
+      bgImage: "/hero.png",
       imagePlaceholderBg: "bg-[#42726b]/10",
       imagePlaceholderText:
         "font-sans font-light text-2xl text-[#42726b] uppercase tracking-widest",
@@ -82,9 +81,9 @@ export const siteData = {
       scrollIcon: "text-[#faf7f3] drop-shadow-md opacity-90",
     },
     content: {
-      tagline: "DONNEZ VIE À VOS ENVIES",
+      tagline: "DONNEZ VIE À VOS ENVIES DE DÉCORATION",
       titleLine1: "UN INTÉRIEUR",
-      titleLine2: "POUR SE RESSOURCER",
+      titleLine2: "QUI PREND SOIN DE VOUS",
       imagePlaceholderText: "ESPACE INSPIRATION",
       cta: "Découvrir mon univers",
       ctaHref: "#about",
@@ -103,7 +102,8 @@ export const siteData = {
       "BIEN-ÊTRE AU QUOTIDIEN",
       "ÉCOUTE BIENVEILLANTE",
       "AMÉNAGEMENT FONCTIONNEL",
-      "ESPACES RESSOURÇANTS",
+      "VISUALISATION 3D",
+      "UN INTÉRIEUR À VOTRE IMAGE",
     ],
   },
 
@@ -192,7 +192,7 @@ export const siteData = {
       titleLine1: "MES",
       titleLine2: "PRESTATIONS",
       quote:
-        "Une offre modulable et accessible. Du simple conseil pour débloquer une idée, jusqu'à la métamorphose complète de votre intérieur.",
+        "Une offre modulable et sur-mesure. Du simple conseil pour débloquer une idée, jusqu'à la métamorphose complète de votre intérieur.",
       tabParticuliers: "Pour les Particuliers",
       tabPros: "Pour les Professionnels",
       particuliersItems: [
@@ -228,7 +228,7 @@ export const siteData = {
           detailsList: [
             {
               name: "Ce que ça comprend",
-              desc: "Analyse de l'espace à partir de vos photos/vidéos et plan d'action clair.",
+              desc: "Questionnaire rapide, analyse de l'espace à partir de vos photos/vidéos et plan d'action clair.",
             },
             {
               name: "Ce que vous obtenez",
@@ -259,7 +259,7 @@ export const siteData = {
             {
               name: "Options & Tarif",
               desc: "+ 79 € pour des visuels 3D.",
-              price: "149 €",
+              price: "149 € / espace",
             },
           ],
         },
@@ -273,11 +273,11 @@ export const siteData = {
           detailsList: [
             {
               name: "Ce que ça comprend",
-              desc: "Échange 1h30, conseils en direct sur l'aménagement, les couleurs, le mobilier.",
+              desc: "Questionnaire détaillé, échange 1h30, conseils en direct sur l'aménagement, les couleurs et le mobilier.",
             },
             {
               name: "Ce que vous obtenez",
-              desc: "Des réponses concrètes, détaillées et un compte-rendu écrit (feuille de route).",
+              desc: "Des réponses concrètes et détaillées ainsi qu'un compte-rendu écrit de notre rendez-vous.",
             },
             {
               name: "Tarif",
@@ -295,7 +295,7 @@ export const siteData = {
           detailsList: [
             {
               name: "Ce que ça comprend",
-              desc: "Relevé de vos besoins, plans d'agencement cotés, planche d'ambiance et liste shopping.",
+              desc: "Questionnaire détaillé, relevé de vos besoins, proposition d'agencement, recherche et validation du style décoratif et liste shopping.",
             },
             {
               name: "Ce que vous obtenez",
@@ -303,7 +303,8 @@ export const siteData = {
             },
             {
               name: "Tarif",
-              price: "299 € / pièce",
+              desc: "Prix de base jusqu'à 10 m². Ajustable selon superficie et spécificités.",
+              price: "Dès 299 €",
             },
           ],
         },
@@ -311,17 +312,17 @@ export const siteData = {
           icon: "stone",
           title: "Maison Révélée",
           details:
-            "Le principe de 'Maison à vendre', mais pour y rester ! Un dossier clé en main avec tous les éléments nécessaires pour réaliser votre projet.",
+            "Un dossier clé en main. L'objectif est de repenser chaque espace pour que la maison redevienne une source de bien-être au quotidien.",
           image:
             "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
           detailsList: [
             {
               name: "Ce que ça comprend",
-              desc: "Visite complète, tri (ce qu'on garde/modifie), plan d'action pièce par pièce et projection.",
+              desc: "Questionnaire détaillé, visite complète et tri. On relooke ce qui peut l’être et on transforme ce qui doit changer. Tarif préférentiel multi-pièces.",
             },
             {
               name: "Ce que vous obtenez",
-              desc: "Une nouvelle lecture de votre intérieur avec un plan concret pour réinventer votre maison.",
+              desc: "Une nouvelle lecture de votre intérieur mise en valeur par des visuels 3D immersifs.",
             },
             {
               name: "Tarif",
@@ -341,7 +342,7 @@ export const siteData = {
           detailsList: [
             {
               name: "Ce que ça comprend",
-              desc: "Analyse de l'espace, sélection couleurs/mobilier et projection visuelle en option.",
+              desc: "Analyse de l'espace, valorisation de l'existant, sélection couleurs/mobilier et projection visuelle en option.",
             },
             {
               name: "Ce que vous obtenez",
@@ -363,7 +364,7 @@ export const siteData = {
           detailsList: [
             {
               name: "Ce que ça comprend",
-              desc: "Étude des besoins, plans d'agencement, sélection du mobilier et feuille de route déco.",
+              desc: "Étude des besoins, plans d'agencement, sélection du mobilier, visuels 3D inclus et feuille de route déco.",
             },
             {
               name: "Ce que vous obtenez",
@@ -385,7 +386,7 @@ export const siteData = {
           detailsList: [
             {
               name: "Ce que ça comprend",
-              desc: "Analyse des cibles, sélection de déco résistante et feuille de route visuelle.",
+              desc: "Analyse des cibles, étude d'agencement, sélection de déco résistante et visuels 3D.",
             },
             {
               name: "Ce que vous obtenez",
@@ -425,36 +426,42 @@ export const siteData = {
       title: "RÉALISATIONS",
       items: [
         {
-          title: "Maison Familiale",
-          category: "Rénovation Complète",
+          title: "Appartement Audacieux",
+          category: "Réagencement & Décoration",
           description:
-            "Optimisation des espaces de vie pour une famille nombreuse. Priorité à la circulation et aux rangements.",
-          image:
-            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80",
+            "Projet de décoration pour un appartement en location. Transformation d'un espace froid en un cocon chaleureux sans travaux lourds. Un aménagement fonctionnel et audacieux qui sublime la luminosité naturelle.",
+          images: [
+            "/realisation_1.jpg",
+            "/realisation_1.1.jpg",
+            "/realisation_1.2.jpg",
+          ],
         },
         {
           title: "Appartement Haussmannien",
           category: "Agencement & Déco",
           description:
             "Mise en valeur des moulures existantes avec une décoration moderne et chaleureuse.",
-          image:
+          images: [
             "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=80",
+          ],
         },
         {
           title: "Cabinet Paramédical",
           category: "Aménagement Pro",
           description:
             "Création d'un espace d'accueil rassurant et de salles de soins fonctionnelles et apaisantes.",
-          image:
+          images: [
             "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=80",
+          ],
         },
         {
           title: "Investissement Locatif",
           category: "Optimisation Airbnb",
           description:
             "Décoration coup de cœur pour se démarquer sur les plateformes et maximiser la rentabilité.",
-          image:
+          images: [
             "https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=800&q=80",
+          ],
         },
       ],
     },
@@ -495,22 +502,32 @@ export const siteData = {
         title: "ÉCRIVEZ-MOI",
         nameLabel: "Nom & Prénom",
         emailLabel: "Adresse Email",
+        phoneLabel: "Numéro de téléphone",
         typeLabel: "Vous êtes",
         typeOptions: ["Un Particulier", "Un Professionnel"],
-        serviceLabel: "Prestation souhaitée",
-        serviceOptions: [
-          "SOS Déco (39€)",
-          "Flash Déco (89€)",
-          "Mini-Book (dès 149€)",
-          "RDV Coaching (199€)",
-          "Immersion Déco (299€/pièce)",
-          "Maison Révélée (Sur devis)",
-          "Petit Coup de Neuf (Pro)",
-          "Je m'installe (Pro)",
-          "Investissement Meublé (Pro)",
+        serviceLabel: "Type de projet",
+        serviceOptionsParticuliers: [
+          "Salon / Salle à manger",
+          "Cuisine",
+          "Chambre / Bureau",
+          "Entrée / Couloir",
+          "Salle de bain / Buanderie",
+          "Extension / Véranda",
+          "Terrasse Balcon",
+          "Projet complet (Toute la maison)",
           "Autre demande",
         ],
-        messageLabel: "Votre projet",
+        serviceOptionsPros: [
+          "Cabinet médical / Paramédical",
+          "Bureaux / Coworking / Salle d’attente",
+          "Boutique / Commerce de proximité",
+          "Investissement locatif (Airbnb, Gîte)",
+          "Restaurant / Café",
+          "Autre demande",
+        ],
+        messageLabel: "Votre message",
+        gdprLabel:
+          "En soumettant ce formulaire, j'accepte que mes informations saisies soient utilisées exclusivement dans le cadre de ma demande et de la relation commerciale qui peut en découler. Elles ne seront jamais partagées à des tiers.",
         submitText: "ENVOYER LE MESSAGE",
         loadingText: "ENVOI EN COURS...",
         successMessage:

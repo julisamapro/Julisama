@@ -67,37 +67,39 @@ const Contact = ({ content, design, global }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     clientType: "Un Particulier",
-    serviceType: "SOS Déco (39€)",
+    serviceType:
+      content?.form?.serviceOptionsParticuliers?.[0] ||
+      "Salon / Salle à manger",
     message: "",
+    gdpr: false,
   });
   const [status, setStatus] = useState("idle");
 
   if (!content) return null;
 
-  const allServices = content.form?.serviceOptions || [];
   const isPro = formData.clientType === "Un Professionnel";
-
   const currentServiceOptions = isPro
-    ? allServices.filter((s) => s.includes("(Pro)") || s === "Autre demande")
-    : allServices.filter((s) => !s.includes("(Pro)"));
+    ? content.form?.serviceOptionsPros || []
+    : content.form?.serviceOptionsParticuliers || [];
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
 
     if (name === "clientType") {
       const isNowPro = value === "Un Professionnel";
       const newOptions = isNowPro
-        ? allServices.filter(
-            (s) => s.includes("(Pro)") || s === "Autre demande",
-          )
-        : allServices.filter((s) => !s.includes("(Pro)"));
+        ? content.form?.serviceOptionsPros || []
+        : content.form?.serviceOptionsParticuliers || [];
 
       setFormData({
         ...formData,
         clientType: value,
         serviceType: newOptions[0] || "Autre demande",
       });
+    } else if (type === "checkbox") {
+      setFormData({ ...formData, [name]: checked });
     } else {
       setFormData({ ...formData, [name]: value });
     }
@@ -108,15 +110,29 @@ const Contact = ({ content, design, global }) => {
     setStatus("loading");
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erreur lors de l'envoi du message");
+      }
 
       setStatus("success");
       setFormData({
         name: "",
         email: "",
+        phone: "",
         clientType: "Un Particulier",
-        serviceType: currentServiceOptions[0],
+        serviceType:
+          content?.form?.serviceOptionsParticuliers?.[0] ||
+          "Salon / Salle à manger",
         message: "",
+        gdpr: false,
       });
 
       setTimeout(() => setStatus("idle"), 5000);
@@ -256,6 +272,22 @@ const Contact = ({ content, design, global }) => {
                     </div>
                   </div>
 
+                  <div>
+                    <label htmlFor="phone" className={design?.labelClass}>
+                      {content.form?.phoneLabel || "Numéro de téléphone"}
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className={design?.inputClass}
+                      placeholder="06 XX XX XX XX"
+                    />
+                  </div>
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <CustomSelect
                       label={content.form?.typeLabel}
@@ -289,6 +321,25 @@ const Contact = ({ content, design, global }) => {
                       className={`${design?.inputClass} resize-none`}
                       placeholder="Décrivez-moi vos envies, votre pièce, vos contraintes..."
                     ></textarea>
+                  </div>
+
+                  <div className="flex items-start gap-3 pt-2">
+                    <input
+                      type="checkbox"
+                      id="gdpr"
+                      name="gdpr"
+                      required
+                      checked={formData.gdpr}
+                      onChange={handleChange}
+                      className="mt-0.5 w-4 h-4 accent-[#a2623d] cursor-pointer shrink-0"
+                    />
+                    <label
+                      htmlFor="gdpr"
+                      className="text-[10px] font-sans text-[#faf7f3]/70 leading-relaxed cursor-pointer"
+                    >
+                      {content.form?.gdprLabel ||
+                        "En soumettant ce formulaire, j'accepte que mes informations saisies soient utilisées exclusivement dans le cadre de ma demande et de la relation commerciale qui peut en découler. Elles ne seront jamais partagées à des tiers."}
+                    </label>
                   </div>
 
                   {status === "error" && (

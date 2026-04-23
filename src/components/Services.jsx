@@ -116,12 +116,17 @@ const Services = ({ content, design, global }) => {
       if (itemRefs.current[globalIndex]) {
         setTimeout(() => {
           const element = itemRefs.current[globalIndex];
-          const offset = 140;
-          const elementPosition =
-            element.getBoundingClientRect().top + window.scrollY;
+          const rect = element.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+          const elementTop = rect.top + window.scrollY;
+
+          // Nouveau calcul : On aligne le BAS de la carte avec le bas de l'écran (moins 20px de marge).
+          // Résultat : la boîte de texte (qui est en bas) se retrouve parfaitement au centre du téléphone.
+          let offset = windowHeight - rect.height - 20;
+          if (offset < 0) offset = 20; // Sécurité si l'écran est minuscule
 
           window.scrollTo({
-            top: elementPosition - offset,
+            top: elementTop - offset,
             behavior: "smooth",
           });
         }, 450);
@@ -212,7 +217,7 @@ const Services = ({ content, design, global }) => {
                       key={globalIndex}
                       ref={(el) => (itemRefs.current[globalIndex] = el)}
                       className={`relative overflow-hidden group transition-all duration-800 ease-[cubic-bezier(0.25,1,0.5,1)] 
-                      ${isActive ? "h-[calc(100svh-180px)] md:h-[550px] lg:h-full lg:flex-6" : "h-[100px] lg:h-full lg:flex-1"}
+                      ${isActive ? "h-[calc(100svh-110px)] md:h-[550px] lg:h-full lg:flex-6" : "h-[100px] lg:h-full lg:flex-1"}
                       ${isActive ? ` ${global?.imageRadius || "rounded-4xl lg:rounded-[2.5rem]"}` : ` cursor-pointer ${global?.imageRadius || "rounded-3xl lg:rounded-4xl"}`} ${isActive ? design?.panelActive : design?.panelInactive}`}
                       onMouseEnter={() => {
                         if (isDesktop) {
@@ -239,7 +244,7 @@ const Services = ({ content, design, global }) => {
                       </div>
 
                       <div
-                        className={`absolute inset-0 p-5 lg:p-6 flex items-center justify-center pointer-events-none transition-opacity ${isActive ? "opacity-0 duration-200 delay-0" : "opacity-100 duration-700 delay-400"}`}
+                        className={`absolute inset-0 p-4 lg:p-6 flex items-center justify-center pointer-events-none transition-opacity ${isActive ? "opacity-0 duration-200 delay-0" : "opacity-100 duration-700 delay-400"}`}
                       >
                         <div className="flex flex-col items-center gap-3 lg:hidden w-full">
                           <div className="flex items-center gap-3">
@@ -267,9 +272,9 @@ const Services = ({ content, design, global }) => {
                       </div>
 
                       <div
-                        className={`absolute inset-0 p-5 md:p-10 flex flex-col justify-between z-10 transition-all ease-out ${isActive ? "opacity-100 translate-y-0 duration-800 delay-300" : "opacity-0 translate-y-8 duration-200 delay-0 pointer-events-none"}`}
+                        className={`absolute inset-0 p-4 md:p-10 flex flex-col justify-between z-10 transition-all ease-out ${isActive ? "opacity-100 translate-y-0 duration-800 delay-300" : "opacity-0 translate-y-8 duration-200 delay-0 pointer-events-none"}`}
                       >
-                        <div className="flex justify-between items-start">
+                        <div className="flex justify-between items-start shrink-0">
                           <div
                             className={`w-10 h-10 transition-transform duration-700 ${isActive ? "scale-100" : "scale-50"} ${design?.iconActive}`}
                           >
@@ -282,24 +287,30 @@ const Services = ({ content, design, global }) => {
                           </span>
                         </div>
 
+                        {/* Optimisation des marges (padding p-4 au lieu de p-8 sur mobile) pour gagner de la place */}
                         <div
-                          className={`flex flex-col justify-end mt-auto w-full md:w-[500px] lg:w-[600px] max-w-full p-5 lg:p-8 rounded-2xl border border-white/10 shadow-2xl ${design?.contentBoxBg || "bg-[#303030]/90 backdrop-blur-xl"}`}
+                          className={`flex flex-col mt-auto w-full md:w-[500px] lg:w-[600px] max-w-full p-4 md:p-6 lg:p-8 rounded-2xl border border-white/10 shadow-2xl pointer-events-auto ${design?.contentBoxBg || "bg-[#303030]/90 backdrop-blur-xl"}`}
                         >
-                          <h3 className={`mb-3 ${design?.titleActive}`}>
+                          {/* Ajout de break-words, hyphens-auto et de la gestion de taille sur mobile pour corriger le problème du T */}
+                          <h3
+                            className={`mb-2 lg:mb-3 shrink-0 break-words hyphens-auto text-[26px] leading-tight md:text-[inherit] md:leading-[inherit] ${design?.titleActive}`}
+                          >
                             {item.title}
                           </h3>
-                          <p className={`mb-6 ${design?.descActive}`}>
+                          <p
+                            className={`mb-3 lg:mb-6 shrink-0 ${design?.descActive}`}
+                          >
                             {item.details}
                           </p>
 
                           {item.detailsList && item.detailsList.length > 0 && (
                             <ul
-                              className={`space-y-3 pt-5 border-t ${design?.listContainer}`}
+                              className={`space-y-2 lg:space-y-3 pt-3 lg:pt-5 border-t shrink-0 ${design?.listContainer}`}
                             >
                               {item.detailsList.map((detail, idx) => (
                                 <li
                                   key={idx}
-                                  className="flex justify-between items-end gap-4"
+                                  className="flex justify-between items-end gap-3 lg:gap-4"
                                 >
                                   <div className="flex-1">
                                     <h4
