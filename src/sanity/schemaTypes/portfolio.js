@@ -24,9 +24,20 @@ export const portfolioType = {
     },
     {
       name: "images",
-      title: "Images (Glissez jusqu'à 3 images ici)",
+      title:
+        "Images (Astuce : Lâchez jusqu'à 3 images N'IMPORTE OÙ sur cette page)",
       type: "array",
-      of: [{ type: "image", options: { hotspot: true } }],
+      of: [
+        {
+          type: "image",
+          options: { hotspot: true },
+          // Cette ligne tue le bug de la "case vide"
+          validation: (Rule) =>
+            Rule.required().error(
+              "Cette case est vide. Ajoutez une image ou supprimez la case avec les 3 petits points verticaux.",
+            ),
+        },
+      ],
       options: {
         layout: "grid",
       },
