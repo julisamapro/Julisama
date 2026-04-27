@@ -615,7 +615,7 @@ export const siteData = {
           textLines: [
             "07 56 80 57 44",
             "contact@julisama.fr",
-            "Intervention France entière",
+            "Intervention dans le Pas-de-Calais et à distance",
           ],
         },
         {
