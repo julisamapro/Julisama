@@ -44,7 +44,7 @@ const About = ({ content, design, global }) => {
                   src={content.image}
                   alt="Portrait"
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover object-[50%_20%] transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               ) : (
@@ -62,7 +62,6 @@ const About = ({ content, design, global }) => {
         </div>
       </div>
 
-      {/* Vague de transition SVG avec ombre portée douce */}
       <div
         className={`absolute bottom-0 left-0 w-full leading-none z-0 ${design?.bottomDivider || ""}`}
       >

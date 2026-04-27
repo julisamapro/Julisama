@@ -136,8 +136,7 @@ export const siteData = {
         "Car un intérieur bien pensé n'est pas un luxe réservé à une élite. C'est un espace qui libère, qui apaise et qui soutient votre quotidien. Mon rôle est de révéler le potentiel de votre maison avec une approche authentique et fonctionnelle, pour que vous ressentiez enfin ce précieux sentiment : « Enfin chez moi ».",
       founders: "Isabelle Roussel",
       foundersRole: "Fondatrice & Décoratrice",
-      image:
-        "https://images.unsplash.com/photo-1542621334-a254cf47733d?auto=format&fit=crop&w=800&q=80",
+      image: "/JULISAMA-Isabelle.jpg",
     },
   },
 

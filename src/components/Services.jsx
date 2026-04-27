@@ -354,6 +354,10 @@ const Services = ({ content, design, global }) => {
                               {item.title}
                             </span>
                           </div>
+                          {/* AJOUT : Indicateur visuel pour inviter au clic sur mobile */}
+                          <span className="text-[9px] text-white/70 uppercase tracking-[0.2em] font-sans font-medium animate-pulse mt-1">
+                            Appuyer pour découvrir
+                          </span>
                         </div>
 
                         <div
