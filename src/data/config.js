@@ -484,17 +484,17 @@ export const siteData = {
       btnText: "DÉCOUVRIR TOUS LES AVIS SUR GOOGLE",
       reviews: [
         {
-          author: "Ludivine Urze",
+          author: "Ludivine & Jean-Paul",
           project: "Rénovation Salle de Bain",
           text: "Après 18 ans avec cette salle de bain, nous avions envie de changement, mais n'arrivions pas à nous projeter. C'est là qu'Isabelle est intervenue!! En un rendez vous elle a su analyser les contraintes techniques, écouter nos envies, besoins et a pu nous proposer une implantation et des matériaux qui repondent exactement à ce dont on rêvait!!! Je n'imaginais pas un tel résultat !!!! Allez y les yeux fermés vous serez surpris du potentiel de votre pièce qui sera sublimée par le talent et les compétences d'Isabelle. Encore Merci à toi pour tout ce travail!!",
         },
         {
-          author: "Emilie Perren",
+          author: "Emilie & Fabrice ",
           project: "Décoration Cuisine",
           text: "Une grande première pour nous de faire appel à une décoratrice d'intérieur ! Elle a su nous conseiller tout en étant à l'écoute de nos envies, ce qui pour nous est important. Faire quelque chose qui nous ressemble et dont on a envie pour se sentir bien chez soi !! Le résultat de notre cuisine est incroyable !!",
         },
         {
-          author: "Claudie Lemaitre",
+          author: "Claudie ",
           project: "Aménagement Studio & 3D",
           text: "Je tiens à remercier infiniment Isabelle pour son accompagnement précieux. Je venais de traverser une période de vie compliquée, avec une séparation et un changement total de cadre. Je quittais une maison pour m’installer dans un studio, et j’avais beaucoup de mal à me projeter dans ce nouvel espace. J’avais besoin de me sentir bien chez moi, tout en conservant certains de mes meubles et en maîtrisant mon budget. Grâce à ses visuels 3D, Isabelle a su transformer mes doutes en évidence. Elle a parfaitement compris mes besoins et m’a proposé un aménagement à la fois fonctionnel et rassurant, avec un vrai espace nuit, une table pour les repas et suffisamment de rangements, notamment dans la cuisine. Son travail m’a permis de me projeter immédiatement, au point de me décider à signer cette location en toute sérénité. Au-delà de ses compétences, j’ai été touchée par son écoute, sa bienveillance et sa capacité à accompagner avec justesse dans un moment aussi sensible. Encore merci pour tout.",
         },
