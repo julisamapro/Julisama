@@ -1,3 +1,5 @@
+"use client";
+
 const TrustBar = ({ content, design }) => {
   if (!content) return null;
 
@@ -7,7 +9,10 @@ const TrustBar = ({ content, design }) => {
     <section
       className={`relative w-full overflow-hidden py-12 ${design?.bgColor || ""}`}
     >
-      <div className="flex whitespace-nowrap animate-marquee md:animate-marquee-slow">
+      <div
+        className="flex w-max whitespace-nowrap animate-marquee md:animate-marquee-slow"
+        style={{ animationDuration: "75s" }}
+      >
         {repeatedItems.map((item, index) => (
           <div key={index} className="flex items-center mx-12">
             <span

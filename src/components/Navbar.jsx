@@ -100,7 +100,7 @@ const Navbar = ({ content, design, global }) => {
           )}
         </a>
 
-        <div className="hidden md:flex items-center space-x-12">
+        <div className="hidden lg:flex items-center space-x-12">
           {content.links.map((link) => {
             const sectionId = link.href.substring(1);
             const isActive = activeLink === sectionId;
@@ -145,7 +145,7 @@ const Navbar = ({ content, design, global }) => {
           </a>
         </div>
 
-        <div className="md:hidden flex items-center z-50">
+        <div className="lg:hidden flex items-center z-50">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="focus:outline-none transition-transform active:scale-90"
@@ -166,7 +166,7 @@ const Navbar = ({ content, design, global }) => {
       </div>
 
       <div
-        className={`md:hidden absolute top-full left-0 w-full transition-all duration-500 ease-in-out overflow-hidden ${design?.mobileMenuBg} ${isMobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}
+        className={`lg:hidden absolute top-full left-0 w-full transition-all duration-500 ease-in-out overflow-hidden ${design?.mobileMenuBg} ${isMobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}
       >
         <div className="px-6 py-8 flex flex-col space-y-6 text-center">
           {content.links.map((link) => {

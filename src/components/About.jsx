@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 const About = ({ content, design, global }) => {
@@ -18,7 +20,9 @@ const About = ({ content, design, global }) => {
             <h2 className={`mb-4 ${design?.subtitle}`}>{content.subtitle}</h2>
             <h3 className={`mb-8 ${design?.title}`}>{content.title}</h3>
 
-            <div className={`space-y-6 ${design?.textContainer}`}>
+            <div
+              className={`flex flex-col gap-3 md:gap-4 ${design?.textContainer}`}
+            >
               <p>{content.desc1}</p>
               <p>{content.desc2}</p>
             </div>

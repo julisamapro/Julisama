@@ -117,7 +117,7 @@ export const siteData = {
       title:
         "font-serif text-4xl md:text-6xl leading-[0.9] font-black text-[#303030] uppercase",
       textContainer:
-        "font-sans text-base font-medium leading-relaxed text-justify text-[#303030]/80",
+        "font-sans text-base font-medium leading-relaxed text-left text-[#303030]/80",
       founderContainer: "border-l-2 border-[#42726b]",
       founderName: "font-serif font-black text-2xl text-[#42726b]",
       founderRole:
