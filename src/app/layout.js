@@ -1,12 +1,13 @@
 import "./globals.css";
 import AOSInit from "@/components/AOSInit";
 
+/* block integration des meta donnees google et seo */
 export const metadata = {
   metadataBase: new URL("https://www.julisama.fr"),
 
   title: "Julisama | Décoratrice d'intérieur & Designer d'espace",
   description:
-    "Créer des intérieurs où l'on se sent bien, avec authenticité et fonctionnalité. Révélez le potentiel de votre maison ou de vos espaces professionnels avec Julisama.",
+    "Décoratrice d'intérieur près de Béthune. Aménagement sur mesure, conseils et modélisation 3D pour révéler le potentiel de votre habitat. Parlons projet !",
 
   keywords: [
     "décoratrice d'intérieur",
@@ -19,6 +20,10 @@ export const metadata = {
     "décoration professionnelle",
     "aménagement Airbnb",
     "Julisama",
+    "Béthune",
+    "Burbure",
+    "Arras",
+    "Pas-de-Calais",
   ],
 
   authors: [{ name: "Isabelle Roussel" }],
@@ -34,7 +39,7 @@ export const metadata = {
   openGraph: {
     title: "Julisama | Décoratrice d'intérieur & Designer d'espace",
     description:
-      "Découvrez mon univers et mes prestations pour particuliers et professionnels.",
+      "Découvrez mon univers et mes prestations pour particuliers et professionnels à Béthune et ses environs.",
     url: "https://www.julisama.fr",
     siteName: "Julisama Décoration",
     images: [
@@ -60,8 +65,13 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
+
+  verification: {
+    google: "y2IAHD8yfr0Nxu8zXVnBoBpLXThF-LGZ2OhmHlZXzxw",
+  },
 };
 
+/* block structure principale html et body */
 export default function RootLayout({ children }) {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -69,14 +79,30 @@ export default function RootLayout({ children }) {
     name: "Julisama",
     image: "https://www.julisama.fr/logo.png",
     description:
-      "Décoratrice d'intérieur et Designer d'espace. Créer des intérieurs où l'on se sent bien, avec authenticité et fonctionnalité.",
+      "Décoratrice d'intérieur et Designer d'espace intervenant à Burbure, Béthune et dans le Pas-de-Calais. Créer des intérieurs où l'on se sent bien, avec authenticité et fonctionnalité.",
     url: "https://www.julisama.fr",
     telephone: "+33756805744",
     email: "contact@julisama.fr",
     address: {
       "@type": "PostalAddress",
+      addressLocality: "Burbure",
+      postalCode: "62190",
       addressCountry: "FR",
     },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Béthune",
+      },
+      {
+        "@type": "City",
+        name: "Burbure",
+      },
+      {
+        "@type": "State",
+        name: "Pas-de-Calais",
+      },
+    ],
     sameAs: [
       "https://www.instagram.com/julisama_deco/",
       "https://www.facebook.com/people/Julisama-D%C3%A9coratrice-dint%C3%A9rieur/61563882805625/",
