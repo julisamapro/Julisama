@@ -52,7 +52,6 @@ export default function Home() {
         global={globalSettings}
       />
 
-      {/* AJOUT DE LA SECTION AVIS ICI */}
       <Testimonials
         content={siteData.testimonials.content}
         design={siteData.testimonials.design}
